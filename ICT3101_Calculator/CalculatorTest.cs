@@ -49,14 +49,14 @@ namespace ICT3101_Calculator
             Assert.That(result, Is.EqualTo(2));
 
         }
-        [Test]
-        [TestCase(0, 0)]
-        [TestCase(0, 10)]
-        [TestCase(10, 0)]
-        public void Divide_WithZerosAsInputs_ResultThrowArgumentException(int a, int b)
-        {
-            Assert.That(() => _calculator.Divide(a, b), Throws.ArgumentException);
-        }
+        //[Test]
+        //[TestCase(0, 0)]
+        //[TestCase(0, 10)]
+        //[TestCase(10, 0)]
+        //public void Divide_WithZerosAsInputs_ResultThrowArgumentException(int a, int b)
+        //{
+        //    Assert.That(() => _calculator.Divide(a, b), Throws.ArgumentException);
+        //}
 
         [Test]
         public void Factorial_FactorialOfANumber_ResultOfFactorial()
@@ -190,6 +190,12 @@ namespace ICT3101_Calculator
             // Assert
             Assert.That(() => _calculator.UnknownFunctionB(4, 5), Throws.ArgumentException);
         }   
+        [Test]
+        public void GenMagicNumber_WhenFirstNumberInTxtFileIsUsed_Result()
+        {
+            FileReader reader = new FileReader();
+            Assert.That(() => _calculator.GenMagicNum(0,reader), Is.EqualTo(24));
+        }
 
     }
 }
