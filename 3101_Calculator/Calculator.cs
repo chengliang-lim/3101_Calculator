@@ -165,7 +165,7 @@ namespace _3101_Calculator
             double result = 0;
             int choice = Convert.ToInt16(input);
 
-            string[] magicStrings = fileReader.Read("C:/SIT ICT Modules/ICT 3101/Lab/3101_Calculator/3101_Calculator/MagicNumbers.txt");
+            string[] magicStrings = fileReader.Read("../../../../3101_Calculator/MagicNumbers.txt");
             if ((choice >= 0) && (choice < magicStrings.Length))
             {
                 result = Convert.ToDouble(magicStrings[choice]);
